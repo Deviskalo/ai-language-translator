@@ -41,16 +41,15 @@ export async function POST(request: Request) {
       const url = `${TRANSLATE_API}?q=${encodeURIComponent(text)}&langpair=${encodeURIComponent(langPair)}`
       
       const response = await fetch(url)
+      const data = await response.json()
 
       if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        console.error('Translation API error:', errorData)
-        throw new Error(errorData.error?.message || 'Translation API error')
+        console.error('Translation API error:', data)
+        throw new Error(data.error?.message || 'Translation API error')
       }
 
-      const data = await response.json()
-      
       if (!data.responseData?.translatedText) {
+        console.error('Invalid translation response:', data)
         throw new Error('Invalid response from translation service')
       }
 
@@ -68,9 +67,10 @@ export async function POST(request: Request) {
       })
 
       return NextResponse.json({
-        translatedText: translation,
+        translation: translation,
         id: savedTranslation.id
       })
+
     } catch (error) {
       console.error('Translation service error:', error)
       return NextResponse.json(
