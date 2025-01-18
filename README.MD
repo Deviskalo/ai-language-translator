@@ -89,7 +89,7 @@ npm install
 cp .env.example .env.local
 ```
 
-Change `.env.example` to `.env` and replace MongoDB connection string with your actual database connection string.
+Edit `.env.example` with your MongoDB connection string.
 
 4. Set up the database:
 
@@ -170,6 +170,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Your Name - [@deviskalo](https://twitter.com/@deviskalo)
+Your Name - [@dev_iskalo](https://twitter.com/@dev_iskalo)
 
 Project Link: [https://github.com/Deviskalo/ai-translator](https://github.com/Deviskalo/ai-translator)
