@@ -5,15 +5,15 @@ import type { Translation } from "@prisma/client";
 import { TextToSpeech } from "./text-to-speech";
 import { useTranslationEvent } from "../hooks/useTranslationEvent";
 
-interface Translation {
-  id: string;
-  sourceText: string;
-  translatedText: string;
-  sourceLang: string;
-  targetLang: string;
-  type: string;
-  createdAt: string;
-}
+// interface TranslationType {
+//   id: string;
+//   sourceText: string;
+//   translatedText: string;
+//   sourceLang: string;
+//   targetLang: string;
+//   type: string;
+//   createdAt: string;
+// }
 
 export function TranslationHistory() {
   const [history, setHistory] = useState<Translation[]>([]);
