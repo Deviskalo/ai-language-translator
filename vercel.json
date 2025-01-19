@@ -23,9 +23,5 @@
       "GMAIL_USER": "deviskalo2000@gmail",
       "GMAIL_PASS": "lfgf bqvo xbbb gfqx"
     }
-  },
-  "scripts": {
-    "build": "prisma generate && next build",
-    "start": "next start"
   }
 }
