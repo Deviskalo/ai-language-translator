@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -31,7 +32,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 transition-colors duration-200">
-      <section className="container mx-auto px-4 py-20">
+      <section className="container mx-auto px-4 py-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
             Contact Us
@@ -42,10 +43,10 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="container mx-auto px-4 py-16">
+      <section className="container flex items-center gap-10 flex-col lg:flex-row mx-auto px-4 py-14">
         <form
           onSubmit={handleSubmit}
-          className="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 space-y-6"
+          className="max-w-2xl mx-auto bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl rounded-lg p-12 space-y-2"
         >
           <div>
             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
@@ -98,6 +99,16 @@ export default function ContactPage() {
             </p>
           )}
         </form>
+
+        <div className="flex items-end hover:shadow-2xl justify-center rounded-lg">
+          <Image
+            src="/banner.png"
+            alt="banner image"
+            width={600}
+            height={250}
+            className="rounded-lg "
+          />
+        </div>
       </section>
     </div>
   );

@@ -5,6 +5,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MobileMenu } from "./mobile-menu";
+import Image from "next/image";
 
 export function NavBar() {
   const pathname = usePathname();
@@ -34,18 +35,15 @@ export function NavBar() {
         className={`fixed top-0 left-0 right-0 z-[90] border-b border-gray-200 w-full dark:border-gray-800
         ${
           scrolled
-            ? "bg-white/60 dark:bg-gray-900/60 shadow-lg"
+            ? "bg-white/60  dark:bg-gray-900/60 backdrop-blur-sm shadow-lg"
             : "bg-white dark:bg-gray-900"
         } transition-all duration-300`}
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              <Link
-                href="/"
-                className="text-2xl font-bold text-gray-900 dark:text-white"
-              >
-                AI Translator
+              <Link href="/">
+                <Image src="/logo.png" width={120} height={30} alt="logo" />
               </Link>
               <div className="hidden md:flex space-x-6">
                 <Link

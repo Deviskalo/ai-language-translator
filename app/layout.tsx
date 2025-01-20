@@ -9,7 +9,7 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AI Translator",
+  title: "LingualLink | AI Language Translator",
   description: "A modern language translation app",
 };
 

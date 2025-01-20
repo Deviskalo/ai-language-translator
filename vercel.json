@@ -19,9 +19,9 @@
   },
   "build": {
     "env": {
-      "DATABASE_URL": "mongodb+srv://iskalo:rereKamara@cluster0.1a2g7.mongodb.net/ai-translator?retryWrites=true&w=majority",
-      "GMAIL_USER": "deviskalo2000@gmail",
-      "GMAIL_PASS": "lfgf bqvo xbbb gfqx"
+      "DATABASE_URL": "@database_url",
+      "GMAIL_USER": "@gmail_user",
+      "GMAIL_PASS": "@gmail_pass"
     }
   }
 }

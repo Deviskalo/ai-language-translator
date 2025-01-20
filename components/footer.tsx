@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800">
@@ -5,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-              AI Translator
+              <Image src="/logo.png" alt="logo" width={200} height={20} />
             </h3>
             <p className="text-gray-600 dark:text-gray-300">
               Breaking language barriers with advanced AI translation
@@ -42,6 +44,22 @@ export function Footer() {
                   Contact
                 </a>
               </li>
+              <li>
+                <a
+                  href="/help"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  Help
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/faq"
+                  className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                >
+                  FAQ
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -50,17 +68,14 @@ export function Footer() {
               Features
             </h4>
             <ul className="space-y-2">
-              <li className="text-gray-600 dark:text-gray-300">
-                Text Translation
+              <li className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                <a href="/text-translation">Text Translation</a>
               </li>
-              <li className="text-gray-600 dark:text-gray-300">
-                Document Translation
+              <li className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                <a href="/document-translation">Document Translation</a>
               </li>
-              <li className="text-gray-600 dark:text-gray-300">
-                Speech-to-Text
-              </li>
-              <li className="text-gray-600 dark:text-gray-300">
-                Text-to-Speech
+              <li className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
+                <a href="/speech-tools">Speech-to-Text</a>
               </li>
             </ul>
           </div>
@@ -92,7 +107,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800">
           <p className="text-center text-gray-600 dark:text-gray-300">
-            © {new Date().getFullYear()} AI Translator. All rights reserved.
+            © {new Date().getFullYear()} LingualLink. All rights reserved.
           </p>
         </div>
       </div>

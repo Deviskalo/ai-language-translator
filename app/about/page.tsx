@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-200">
@@ -7,7 +9,7 @@ export default function AboutPage() {
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
             About{" "}
             <span className="text-blue-600 dark:text-blue-400">
-              AI Translator
+              LingualLink
             </span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
@@ -26,11 +28,11 @@ export default function AboutPage() {
               Our Mission
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              At AI Translator, we believe that language should never be a
-              barrier to understanding, connection, or opportunity. Our mission
-              is to provide accurate, reliable, and accessible translation
-              services that help people and businesses communicate effectively
-              across linguistic boundaries.
+              At LingualLink, we believe that language should never be a barrier
+              to understanding, connection, or opportunity. Our mission is to
+              provide accurate, reliable, and accessible translation services
+              that help people and businesses communicate effectively across
+              linguistic boundaries.
             </p>
           </div>
         </div>
@@ -39,7 +41,7 @@ export default function AboutPage() {
       {/* Features Grid */}
       <section className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
-          Why Choose AI Translator?
+          Why Choose <span className="text-blue-500">LingualLink</span>?
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="p-6 rounded-xl border border-gray-200 dark:border-gray-800">
@@ -131,7 +133,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
-              Our Technology
+              Our <span className="text-blue-500">Technology</span>
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               We leverage the latest advancements in artificial intelligence and
@@ -185,7 +187,15 @@ export default function AboutPage() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
             <div className="text-center">
-              <div className="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
+              <div className="w-32 item-center justify-center flex h-32 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4">
+                <Image
+                  src="/me.jpg"
+                  width={125}
+                  height={100}
+                  alt="developer image"
+                  className="rounded-full relative object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Dev Iskalo
               </h3>
@@ -194,7 +204,15 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="text-center">
-              <div className="w-32 h-32 rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4" />
+              <div className="w-32 h-32 item-center justify-center flex rounded-full bg-gray-200 dark:bg-gray-700 mx-auto mb-4">
+                <Image
+                  src="/team.png"
+                  width={125}
+                  height={100}
+                  alt="team image"
+                  className="rounded-full relative object-cover"
+                />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Iskalo Tech
               </h3>

@@ -1,8 +1,8 @@
-# AI Translator
+# LingualLink Translator
 
 A modern, full-stack translation application built with Next.js 13+, MongoDB, and Prisma. This application provides real-time translation services with support for text, documents, and speech across 100+ languages.
 
-![AI Translator Screenshot](screenshot.png)
+![LingualLink Translator Screenshot](./public/readme_banner.png)
 
 ## Features
 
@@ -89,7 +89,7 @@ npm install
 cp .env.example .env.local
 ```
 
-Edit `.env.example` with your MongoDB connection string.
+Edit `.env.example` with your MongoDB connection string and other relevent.
 
 4. Set up the database:
 
@@ -138,6 +138,7 @@ npm start
 ├── prisma/ # Prisma schema and migrations
 ├── public/ # Static assets
 └── types/ # TypeScript type definitions
+└── scripts/ # Contain a script for updating the LICENSE base on the current year
 ```
 
 ## API Routes
