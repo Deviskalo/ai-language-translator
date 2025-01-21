@@ -7,6 +7,9 @@ const nextConfig = {
     config.externals = [...(config.externals || []), { canvas: "canvas" }];
     return config;
   },
+  productionBrowserSourceMaps: true,
+  optimizeFonts: true,
+  swcMinify: true,
 }
 
-module.exports = nextConfig 
+module.exports = nextConfig
