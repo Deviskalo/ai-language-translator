@@ -11,17 +11,5 @@
       "src": "/(.*)",
       "dest": "/"
     }
-  ],
-  "env": {
-    "DATABASE_URL": "@DATABASE_URL",
-    "GMAIL_USER": "@GMAIL_USER",
-    "GMAIL_PASS": "@GMAIL_PASS"
-  },
-  "build": {
-    "env": {
-      "DATABASE_URL": "@DATABASE_URL",
-      "GMAIL_USER": "@GMAIL_USER",
-      "GMAIL_PASS": "@GMAIL_PASS"
-    }
-  }
+  ]
 }
