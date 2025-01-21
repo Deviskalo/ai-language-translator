@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Libre_Franklin as Inter } from "next/font/google";
 import { ThemeProvider } from "../components/theme-provider";
 import { NavBar } from "../components/nav-bar";
 import { Footer } from "../components/footer";
@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "LingualLink | AI Language Translator",
-  description: "A modern language translation app",
+  description: "A modern ai language translation app",
 };
 
 export default function RootLayout({
