@@ -13,15 +13,15 @@
     }
   ],
   "env": {
-    "DATABASE_URL": "@database_url",
-    "GMAIL_USER": "@gmail_user",
-    "GMAIL_PASS": "@gmail_pass"
+    "DATABASE_URL": "@DATABASE_URL",
+    "GMAIL_USER": "@GMAIL_USER",
+    "GMAIL_PASS": "@GMAIL_PASS"
   },
   "build": {
     "env": {
-      "DATABASE_URL": "@database_url",
-      "GMAIL_USER": "@gmail_user",
-      "GMAIL_PASS": "@gmail_pass"
+      "DATABASE_URL": "@DATABASE_URL",
+      "GMAIL_USER": "@GMAIL_USER",
+      "GMAIL_PASS": "@GMAIL_PASS"
     }
   }
 }
