@@ -13,7 +13,10 @@
     }
   ],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "DATABASE_URL": "your_database_url",
+    "EMAIL_SERVER": "your_email_server",
+    "EMAIL_FROM": "your_email_from"
   },
   "installCommand": "npm ci",
   "buildCommand": "prisma generate && npm run build",

@@ -6,11 +6,14 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { MobileMenu } from "./mobile-menu";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 export function NavBar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +23,10 @@ export function NavBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
 
   const isActive = (path: string) => pathname === path;
 
@@ -100,6 +107,12 @@ export function NavBar() {
             </div>
             <div className="flex items-center space-x-4">
               <ThemeToggle />
+              <Link
+                href="/login"
+                className="p-2 font-thin rounded bg-blue-500 text-white"
+              >
+                Login
+              </Link>
               <button
                 onClick={toggleMenu}
                 className="p-2 md:hidden text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"

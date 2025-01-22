@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from "react";
 import type { Translation } from "@prisma/client";
 import { TextToSpeech } from "./text-to-speech";
 import { useTranslationEvent } from "../hooks/useTranslationEvent";
+import { useSession } from "next-auth/react";
 
 // interface TranslationType {
 //   id: string;
@@ -16,6 +17,7 @@ import { useTranslationEvent } from "../hooks/useTranslationEvent";
 // }
 
 export function TranslationHistory() {
+  const { data: session } = useSession();
   const [history, setHistory] = useState<Translation[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -67,6 +69,10 @@ export function TranslationHistory() {
       console.error("Delete failed:", error);
     }
   };
+
+  if (!session) {
+    return <p>Please log in to view your translation history.</p>;
+  }
 
   if (isLoading)
     return (
